@@ -45,7 +45,7 @@ class Register extends StatelessWidget {
           Container(
             child: ElevatedButton(
               onPressed: () {},
-              child: const Text('submit'),
+              child: const Text('Register'),
             ),
           ),
         ],
