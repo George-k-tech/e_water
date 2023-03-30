@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/register.dart';
+import '../widgets/login.dart';
 
 void main() {
   runApp(Home());
