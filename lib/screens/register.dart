@@ -7,6 +7,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  //function to handle routing through pages
   void changePage(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(builder: (_) {
@@ -20,13 +21,36 @@ class _RegisterState extends State<Register> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Regisiter page'),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
-      body: Container(
-        child: ElevatedButton(
-          onPressed: () {
-            changePage(context);
-          },
-          child: const Text('go to login page'),
+      body: Form(
+        child: Column(
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                  labelText: 'Name',
+                  icon: Icon(Icons.person),
+                  hintText: 'enter your name'),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                  labelText: 'Email',
+                  icon: Icon(Icons.email),
+                  hintText: 'enter email'),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'Phone',
+                icon: Icon(Icons.phone),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                changePage(context);
+              },
+              child: const Text('go to login'),
+            ),
+          ],
         ),
       ),
     );
