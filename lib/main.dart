@@ -1,8 +1,7 @@
-import 'package:e_water/screens/items_display.dart';
+import 'package:e_water/screens/grocery.dart';
 import 'package:flutter/material.dart';
 
-
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -10,10 +9,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.pink,
+      theme: ThemeData.dark().copyWith(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 147, 229, 250),
+          brightness: Brightness.dark,
+          surface: const Color.fromARGB(255, 42, 51, 59),
+        ),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 50, 58, 60),
       ),
-      home: const ProductDisplayScreen(),
+      home: const GroceryScreen(),
     );
   }
 }
